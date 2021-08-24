@@ -31,6 +31,10 @@ app.use(passport.session())
 
 require("./routes/auth")(app);
 
+app.get('/', (req, res) => {
+  res.send('Successfully Logged-In')
+});
+
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);
 });
